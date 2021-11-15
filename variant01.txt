@@ -1,0 +1,131 @@
+
+    3+ лет опыта разработки под iOS.
+    Знание Swift, Objective-C, С++.
+    Опыт работы с OpenGL, OpenCV.
+    Опыт работы с обработкой видео, создания сложных эффектов и шейдеров.
+    Опыт работы с многопоточностью.
+    Опыт работы с Git, понимание принципов gitflow.
+    Умение реализовывать нестандартные элементы UI.
+    Знание шаблонов проектирования и умение их применять.
+    Хорошее владение XCode, Instruments и др. инструментами.
+    Желание изучать и использовать новые подходы и технологии.
+    Умение работать с Cocoapods.
+    Уверенные знания UIKit, Foundation, GCD, CoreData, CoreAnimation, Realm.
+
+    2+ years leading a team of engineers, working collaboratively with product and engineering teams.
+    4+ years of experience building top notch technical solutions including high performance ML products.
+    Broad understanding of ML/CV approaches and practices. Deep Learning: classification, detection, segmentation (semantic + instance).
+    Experience with deep learning frameworks (TuriCreate/CoreML, Tensorflow, Pytorch, etc.).
+    Production experience with building ML pipelines including CI/CD, ML Ops.
+    Strong Python programming skills.
+    Knowledge of basic OOP, computer science algorithms and data structures.
+    Communicate openly. Ability to build a collaborative environment.
+
+    BS/MS/PhD degree in Computer Science, Math or Physics.
+    Experience with C++ or mobile development.
+    Experience with ML on mobile platforms (iOS & Android).
+    Solid experience with Linux, Git.
+    Working knowledge of cloud computing (GCP or AWS) and tools and technologies Kubernetes, Docker, etc.
+
+
+    Опыт разработки на Unreal Engine 4 более 4х лет;
+
+    Уверенное владение C++;
+
+    Отличное знание Blueprints;
+
+    Хорошие навыки отладки / профилирования;
+
+    Знание основных алгоритмов и структур данных;
+
+    Всестороннее понимание объектно-ориентированного программирования;
+
+    English - Intermediate+.
+
+
+    Опыт разработки мультиплеерных игр;
+
+    Опыт Unreal Engine 3;
+
+    Опыт работы с современными API-интерфейсами 3D-графики (Vulkan, D3D12, GNM, Metal 2);
+
+    Опыт написания шейдеров на HLSL, Cg или GLSL;
+
+    Знание архитектур CPU, GPU и памяти;
+
+    Страсть к оптимизации кода и данных;
+
+    Сильные математические навыки;
+
+    Опыт разработки консольных игр;
+
+    Знакомство с современными инструментами анализа производительности GPU / CPU.
+
+    Опыт работы со Spark и Kafka
+    Понимание моделирования данных и хранения данных
+    Понимание SQL и NoSQL
+    Уверенные знания одного из языков Python, C/C++, Java, Scala, Golang
+    Практический опыт работы с AWS, GCP или Azure
+    Практический опыт построения ETL процессов
+    Опыт работы с Docker
+    Уровень английского не ниже Intermediate
+
+    Умение программировать (любой язык: C++ \ C# \Java \ JS \ Python и др.)
+    Знание английского языка на уровне Intermediate и выше
+    Аналитическое мышление
+    Понимание жизненного цикла разработки приложения
+    Понимание базовых принципов безопасности в разработке.
+опыт профессиональной работы с одним из следующих языков: Java, Scala, Kotlin, Go, Rust, C, C++, C#, F#;
+
+- умение читать и понимать техническую литературу на английском языке;
+
+- знание принципов работы клиентской части web-приложений;
+
+- опыт написания модульных и функциональных тестов;
+
+- опыт работы с Git;
+
+- умение использовать операционные системы типа *nix;
+
+- желание активно развиваться и изучать новое;
+
+- наличие широкого Интернет-канала и настроенной программы Skype, позволяющих поддерживать качественную видеосвязь.опыт работы с языком Rust;
+
+- опыт работы с Docker;
+
+- понимание принципов работы IP сетей;
+
+- опыт работы с потоковой передачей медиа;
+
+- представление о технологии WebRTC и нижележащих протоколах (ICE, STUN, TURN).опыт использования и понимание языка Rust;
+- приветствуется опыт работы с языками C, C++;
+- понимание FFI и UB;
+- опыт оптимизации программ и умение использовать профилировщик;
+- понимание принципов работы клиент-серверных web-приложений;
+- опыт и понимание принципов проектирования структур баз данных;
+- понимание принципов DDD и слоенной архитектуры;
+- опыт написания модульных и функциональных тестов;
+- опыт работы с Git;
+- умение использовать операционные системы типа *nix;
+- приветствуется опыт работы по CQRS+ES парадигме;
+- приветствуется опыт работы с технологиями Memcached, Redis, RabbitMQ, MongoDB, Cassandra, Kafka;
+- приветствуется опыт работы с другими языками Java, Go, Python, Ruby, TypeScript, JavaScript;
+- желание активно развиваться и изучать новое;
+- умение и желание докапываться до сути;
+- умение поддерживать порядок и быть педантом в вопросах качества;
+- умение читать и понимать техническую литературу на английском языке;
+- терпеливое отношение к чужому коду и к критике собственного;
+- наличие широкого Интернет-канала и настроенной программы Skype, позволяющих поддерживать качественную видеосвязь.
+    3 and more years of experience in server development
+    Deep knowledge of Java
+    Good understanding of C++ code with the ability to write and debug it
+    Linux and server experience - a must
+    Conversational level of English (Tech interview in English)
+    Excellent oral and written communication skills
+    Higher technical education
+
+    Experience in asynchronous programming and functional programming (e.g. RxJava)
+    Experience in high-load projects (using Akka)
+    Experience with asynchronous network structures such as Netty, Vert.x
+    Knowledge of AWS and its services
+
