@@ -1,1 +1,83 @@
-Kalasionak, Vakhner
+Kalasionak
+
+    At least 3 years’ experience in C++ (11 or later) software development;
+    Experience with building complex multi-threaded multi-platform libraries;
+    Strong analytical and problem solving skills;
+    M.Sc. or B.Sc. in Informatics, Computer Science or Engineering;
+    Experience with Android, iOS or Windows PC development is an advantage;
+    Good understanding of English.
+    Experience in .NET/C# software development;
+    Knowledge of Windows Presentation Foundation framework (WPF).
+    Отличное знание C++ (C++ 14/17)
+    Четкое понимание принципов ООП, SOLID, применения паттернов проектирования
+    Опыт разработки с использованием библиотек Qt, STL, Boost
+    Отладка и оптимизация C++ приложений
+    Опыт разработки многопоточных приложений
+    Навыки работы с git
+    4+ years of commercial development experience;
+    1+ years of Go development;
+    Experience in developing high-performance and high-load solutions;
+    Hands-on experience working with different databases (NoSQL, relational, columnar);
+    Knowledge of API design (REST, gRPC);
+    Good understanding of micro-service architecture development;
+    Eagerness to learn new things.
+    Knowledge of С++;
+    Experience in Linux development;
+    Good communication skills and self-organizing;
+    Experience in media streaming domain
+    3 years of commercial experience as a Software Engineer
+    Experience of Java 11 or newer (Oracle Certified is preferred)
+    Experience in SQL databases and ORM frameworks
+    Experience in at least one web framework (Java EE, Spring, Micronaut, Play, Akka, Hybris or equivalent)
+    An understanding of SOA, OOAD concepts and best practices
+    Knowledge of Object-Oriented Programming concepts
+    A can-do attitude & work well as part of a team
+    Bachelor’s degree or equivalent practical experience
+    English level B1 or higher.
+    Knowledge of some of these technologies: C, C++, VB.Net, Batch Scripting, Angular JS, PL/SQL, HTML5, Javascript, CSS3
+    Experience developing Micro services
+    Experience using Agile, TDD and BDD methodologies
+    No SQL databases
+    Общий опыт программирования – не менее 5лет
+    Владение языками С/С++. Ассемблер приветствуется
+    Знание библиотек STL, BOOST
+    Глубокое знание архитектуры операционных систем семейства Windows, внутренних механизмов работы
+    Приветствуется знание недокументированных возможностей Windows
+    Знание WinApi
+    Владение технологиями написания драйверов под Windows в области фильтрации и перехвата дисковых и сетевых операций
+    Навыки алгоритмической оптимизации кода
+    Знание языка программирования С++.
+    Понимание принципов разделения логики программы.
+    Знание часто используемых структур данных и алгоритмов.
+    Опыт разработки пользовательских интерфейсов на UE4 (UMG, Slate), Unity или любом другом движке.
+    Понимание клиент-сервер архитектуры.
+    Опыт разработки на Blueprints UE4.
+    Понимание основ Slate Framework UE4.
+    опыт работы от 1 лет в роли разработчика на протяжении всего жизненного цикла проекта по внедрению систем
+    опыт программирования БД (SQL или PL-SQL или T-SQL), опыт написания сложных запросов и хранимых процедур
+    SQL на уровне анализа производительности запросов
+    Опыт разработки на любом языке высокого уровня (Java, C#, Delphi, PHP, C++, Python)
+    Знание XML
+    опыт внедрения и приемки системы
+    опыт разработки веб-приложений
+    опыт работы с JavaScript
+    опыт разработки одного из видов документации: технический (функциональный) дизайн или техническое задание или техническая спецификация
+    опыт работы в продуктами SAS
+    Уверенное знание языка С++
+    Опыт разработки, отладки, оптимизации приложений на C++
+    Знание системных интерфейсов ОС (приветствуется знание нескольких ОС)
+    Приветствуется знание сетевых протоколов, основ криптографии
+    Знания С/С++ ООП , приветствуется C#, Python
+    Опыт работы c Git
+    Практический опыт Linux Kernel/User space, Знание систем сборок Buildroot, Yocto, Приветствуется Petalinux
+    Знание принципов работы интерфейсов I2C, MOST, USART, CAN, USB, Ethernet, PCI, SpaceWire
+    Желателен опыт работы с платформами : Xilinx Ultrascale , Nvidia Jetson, NXP .
+    Желательно : OpenCV, ffmpeg, libav . Gstreamer, SDL, Ot, Cuda
+    Желательно : NumPy, PyTorch, Tensorflow, Yolo
+    Знание основных принципов ООП и умение применять их на практике
+    Иметь базовое знание языка Go и желание развиваться в этом направлении
+    Английский на уровне не ниже Pre-Intermediate
+    Знание многопоточности, СУБД, клиент-серверной и микросервисной архитектуры
+    Знание основ одного из ООП языков (C#, Java и др.)
+    Опыт работы с front-end
+
