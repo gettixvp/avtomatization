@@ -1,1 +1,140 @@
 goncharova.popravko .
+More than 1 years in ML development;
+• Working experience in using Python (or another programming language);
+• Experience with classification model;
+• Experience with time series analysis and forecast (statsmodels library);
+• Experience with AWS and s3 bucket;
+• The ability to develop API and implant ready-made models into production;
+Experience of deploying models on raspberry pi using tensorflowlite
+• Knowledge of deep learning frameworks (PyTorch, Tensorflow, etc.);
+• Good technical written and spoken English.
+
+
+    Опыт разработки на Unreal Engine 4 более 4х лет;
+
+    Уверенное владение C++;
+
+    Отличное знание Blueprints;
+
+    Хорошие навыки отладки / профилирования;
+
+    Знание основных алгоритмов и структур данных;
+
+    Всестороннее понимание объектно-ориентированного программирования;
+
+    English - Intermediate+.
+
+
+    Опыт разработки мультиплеерных игр;
+
+    Опыт Unreal Engine 3;
+
+    Опыт работы с современными API-интерфейсами 3D-графики (Vulkan, D3D12, GNM, Metal 2);
+
+    Опыт написания шейдеров на HLSL, Cg или GLSL;
+
+    Знание архитектур CPU, GPU и памяти;
+
+    Страсть к оптимизации кода и данных;
+
+    Сильные математические навыки;
+
+    Опыт разработки консольных игр;
+
+    Знакомство с современными инструментами анализа производительности GPU / CPU.
+
+
+    Высшее техническое образование (рассмотрим также студентов последних курсов).
+    Опыт проектирования, разработки и внедрения программного обеспечения автоматизированных систем управления технологическими процессами (АСУ ТП) - не менее 3-х лет.
+    Опыт формирования требований и подбора оборудования для решения задач автоматизации.
+    Опыт работы в SCADA и HMI системах от 3-х лет.
+    Знание и опыт работы в HMI Weintek (пакет программ Utility Manager).
+    Знание оборудования и программного обеспечения Siemens (TIA portal v16).
+    MS Office (Word, Excel).
+    Готовность к командировкам.
+
+    Приветствуется:
+    Умение работать с техническими заданиями, техническими условиями, datasheets, со схемами автоматизации, электрическими, функциональными, структурными схемами, спецификациями, конструкторскими чертежами.
+    Знание языков программирования C, C++, Delphi, SQL.
+    Навыки работы в SolidWorks, AutoCAD, Altium Designer, PDM-системах и системах контроля версий ПО.
+    Навыки работы во Wrike, MS Teams
+    Знание аппаратной платформы и средств разработки ПО одноплатных компьютеров Raspberry pi и аналогичных
+    При желании и достаточном опыте есть реальная возможность перейти на ступень руководителя отдела программирования.
+
+пыт разработки асинхронных многокомпонентных систем
+Знание некоторых из перечисленных языков программирования (формируется много команд с разными профилями):Java, Kotlin, Scala,JavaScript/TypeScript (node.js), Python, С, С++
+Понимание принципов архитектуры многокомпонентных систем и умение применять эти знания на практике (балансировка нагрузки, обеспечение отказоустойчивости и т.д.)
+Умение писать несложный фронтенд (для внутренних пользователей) — HTML/CSS/JS
+
+
+    Work directly with PO, artists and designers to create fun gameplay that feels awesome
+    Collaborate with a cross-disciplinary team to build amazing new technology and tools
+    Be responsible for your feature’s network, memory, GPU and CPU usage
+Passion for software development – we expect you to like to write and maintain code;
+Experience with Unreal Engine 4;
+Experience with Unreal Engine Blueprints;
+Experience with procedural animation;
+Experience with Git;
+Be ready to invest the effort to become an even better developer.
+
+
+    Знание методологии процессного управления и сопровождения внутрибанковского репозитория графических моделей
+    Наличие опыта написания скриптов на языке JavaScript, Java или ином языке (С++, С#)
+    Приветствуется наличие навыка работы в ARIS или в аналогичном ПО для описания БП (Oracle BPA, Business Studio, Visio), опыт написания SQL-запросов, наличие навыков в создании скриптов на платформе проектирования ARIS, администрировании ARIS Business Server
+    Знание стандартного программного обеспечения из линейки продуктов Microsoft Office, современных языков программирования
+    Аналитическое мышление, умение планировать и принимать обоснованные решения
+    Владение навыками в области процессного управления
+    Умение работать с большим объемом информации
+    Коммуникативные навыки и грамотность, умение работать в команде
+
+
+    опыт в программировании от 4-х лет;
+    опыт на Python от 2-х лет;
+    понимание работы CI-процессов (TeamCity, Kotlin etc);
+    приветствуются: опыт работы на С++ , опыт кроссплатформенной сборки (VS, xcode, gradle), знакомство с gamedev.
+
+
+    Опыт работы в IT не менее года
+    Знание go
+    Опыт работы с базами данных (SQL или NoSQL)
+    Владение английским на уровне ведения переписки
+
+    Опыт Back-end разработки отличным от Go (Python, Java, C++ или другие)
+    Опыт Front-end разработки (HTML 5, JavaScript / TypeScript, Angular / React или другие)
+    Опыт написания автоматизированных тестов
+    Знание основ контейнеризации приложений, понимание и опыт использования Docker
+
+
+
+    Demonstrated history of shipping Android apps available on Google Play store, or equivalent
+
+    Experience writing Android Applications with Kotlin or Java
+
+    Knowledge of software design, Android systems and architecture
+
+    Enthusiasm for building components and systems with reliability and long term support in mind
+
+    Good sense of usability
+
+    Desire to build frameworks and developer tools
+
+    Open-minded to explore new languages, skills, techniques, and platforms
+
+    Desire to learn and to teach
+
+    Familiarity with or a desire to learn more about C++ is a plus
+
+    Experience building SDKs in any language is a plus
+
+
+
+
+    Опыт промышленной разработки на Java, C# или C++,
+
+    Опыт программирования графики с использованием OpenGL, DirectX или Vulkan,
+
+    Желание разбираться в чужом коде и делать его лучше,
+
+    Знание скриптовых языков Ruby, Python или любой другой.
+
+
