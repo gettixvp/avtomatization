@@ -1,0 +1,106 @@
+
+    высшее образование БГУИР
+    C++, Qt, OC Linux
+У нас нет детальных требований в описании, потому что мы верим в людей, а не технологии. Если ты крутой программист и знаешь “Unity”, а у нас “Unreal”, мы знаем, что ты сможешь и “Unreal”. Если ты круто пишешь на C/C++, то сможешь и C#/Python/Go и что-бы там ни было.
+
+Сейчас мы работаем над мультиплеерным проектом для PC и консолей на Unreal Engine. Нам нужен человек, который сможет взять себя одну (или несколько) из этих областей: анимация, AI, сетевое взаимодействие.
+
+Мы готовы рассмотреть кандидатов с разным опытом и уровнем подготовки. К сожалению, у нас нет времени заниматься обучением совсем с нуля. Но если у тебя есть выпущенный проект, опыт коммерческой разработки, проекты сделанные на геймджеме или игра, которую ты делал для себя — смело пиши.
+Search interacts with many internal systems at Mapbox, making this a high-visibility team with great opportunities to collaborate across the company. As an iOS Engineer, you'll be responsible for owning the iOS Search SDK.
+
+
+
+    Strong proficiency in Swift with 4+ years of experience;
+
+    Understanding of bridging native C++ libraries;
+
+    Experience with SDK development and robust iterative improvements to API;
+
+    Understanding the customer feedback loop and driving it to the highest standard;
+
+    System architecture experience and understanding of architectural concepts;
+
+    Being excellent team player with the ability to work within a collaborative environment;
+
+    Enthusiasm for learning and knowledge sharing, supported by mentorship experience and strong communication skills in English;
+
+    Passion about programming and having a strong focus on performance aspects;
+
+    Implementation of automated testing with XCTest and CI pipelines (e.g. CircleCI);
+
+    Proficient understanding of code versioning tools such as Git;
+
+    Knowledge of writing a cross-platform code is appreciated.
+
+
+    Proficiency in C++ with experience and fair knowledge of the language specification, C++14/17 standard is appreciated;
+
+    Knowing algorithms and data structures, experimenting with service improvements based on data analysis and performance profiling.
+At least 5 years game development experience - A Must
+● At least 2 years Unity3D experience - A Must
+● Online Gaming experience
+● Deep understanding of data structures, 2d and 3d graphics, memory management, C#, and the Unity asset and build pipeline
+● Experience in developing and optimizing mobile applications in Unity
+● Able to work in a collaborative and agile development environment with excellent time-management, organization, and communication skills
+● Fluency in English, both spoken and written
+● Out of the box thinker, Problem solver
+● Time management skills
+● Team Player
+Released Unity3D projects (please include links to projects)
+● Experience developing games outside Unity, for example, C++, OpenGL
+● Data-Oriented programming experience
+● Experience with Jira
+Interacting with customer to understand and pose relevant data analysis problems
+Developing and validating models and methods that address these problems, and working with the engineering team to deploy these as solutions
+Partner with Solution Architect to generalize solutions and innovating to create the next generation of product features
+Engaging with the technical community to present results externally, keep up to date on recent advances, and advance the state of the art
+3 years professional experience as a Data Scientist or advanced degrees (M.S. or PhD. in Statistics, Data Science, Computer Science with ML focus, or related fields)
+Experience with C++, OpenCV and MFC
+Experience with designing, building and deploying performant CV models on large data sets (bonus: experience with time series data, and with real-time data analysis)
+Familiarity with process improvement and exploratory techniques (e.g. design of experiments and optimization)
+
+    Уверенное знание C/С++ (11,14,17 стандарт), Qt, Cross-platform,CMake,Git.;
+
+    Опыт работы от 1 года;
+
+    Чтение технической документации на английском языке.
+
+    Инициативность, увлечённость, ответственность, самостоятельность, неравнодушное отношение к работе.
+
+    высшее образование (педагогическое или техническое)
+    опыт работы с детьми
+
+    Опыт (не менее 2-3-х лет) разработки электрических принципиальных схем (цифровых преимущественно, аналоговых желательно) и электрических многослойных печатных плат (с использованием следующих типов корпусов ИС: BGA, QFN, LQFP, PQFP (и их подтипов); пассивных элементов: вплоть до 0102);
+    Опыт (не менее 1 года) выполнять монтаж компонентов для экспериментальных печатных плат (двусторонний монтаж);
+    Владение элементной базой для разработки электрических схем и печатных плат; знание спецификации комплектующих;
+    Приветствуется опыт трассировки проводных интерфейсов связи: Ethernet LAN, USB и иных дифференциальных пар;
+    интерфейсов памяти: DDR2, DDR3; любых параллельных интерфейсов обмена информацией; любых беспроводных интерфейсов связи и их модулей (пр. Wi-Fi)
+    Приветствуется навык отладки аналоговых и цифровых устройств на базе различных микроконтроллеров (MCU);
+    Приветствуется навык программирования микроконтроллеров на базе ядер MIPS, (PIC32) или ARM (ARM7, ARM9, Cortex, SoC) или AVR (ATmega и др.) на языке программирования. ANSI C (возможно C++);
+    Приветствуется навык разработки/программирования прикладного/системного ПО для отладки программ микроконтроллеров (любая ОС, любой инструмент разработки);
+    Владение английским языком на уровне чтения технической документации.
+
+    высшее техническое образование;
+    опыт работы в области информационных технологий – не менее 3 лет;
+    знание языка программирования C++, ANSI C;
+    опыт работы с СУБД DB2;
+    продвинутое знание SQL;
+    опыт работы с zOS, OS/390 будет большим преимуществом.
+
+    требуемые знания и навыки – ГОСТ 34, РД 50-34.689, ГОСТ 19;
+    умение писать технические задания, решения, аналитические записки, описания систем и баз данных, технологические инструкции.
+
+допускается незаконченное высшее образование (последний курс обучения БГУИР, БНТУ, ПГУ, БрГТУ), только очная форма обучения
+• специальность, связанная с разработкой программного обеспечения (ПОИТ, ПОИС, ВМСИС, КСИС)
+• наличие свободного времени в пределах 20-30 часов в месяц
+• умение работать в MS Visual Studio .NET
+• понимание основ технологий .NET на уровне: разработать клиент-серверное приложение WinForms/WPF + веб-приложение ASP, сервер взаимодействует с СУБД, корректно применена концепция MVC
+• знание и понимание концепций RUP/UML
+• приветствуется одновременное умение применять другие языки технологии (по убыванию приоритетности: С++, PHP)
+нание С++ на уровне "смогу разработать CRUD приложение, работающее с БД, в технологии клиент-сервер (десктоп)",
+• уверенное владение PHP (можно без объектного подхода). Возможность разработать простейший сайт на базе Joomla! или иной CMS (минимальная доработка типового функционала), самостоятельно разработать что-то наподобие простейшего Интернет-магазина.
+• знание HTML/CSS/Java Script (хотя бы базовые принципы создания простейших страниц, сайтов).
+• знание базовых прикладных алгоритмов (численные методы, графы, деревья, сортировки и так далее).
+• приветствуется умение работать с Маткад/Матлаб, готовность осваивать новые области знаний.
+• могут быть актуальными знания забытых языков наподобие Prolog, Fortran, VBA.
+
