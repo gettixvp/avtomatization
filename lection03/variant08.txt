@@ -1,1 +1,75 @@
-grib
+Уверенное знание языка С++
+Опыт разработки, отладки, оптимизации приложений на C++
+Знание системных интерфейсов ОС (приветствуется знание нескольких ОС)
+Приветствуется знание сетевых протоколов, основ криптографии
+
+Отличное знание C++ (C++ 14/17)
+Четкое понимание принципов ООП, SOLID, применения паттернов проектирования
+Опыт разработки с использованием библиотек Qt, STL, Boost
+Отладка и оптимизация C++ приложений
+Опыт разработки многопоточных приложений
+Навыки работы с git
+
+Deep understanding of C++, multithreading, concurrency
+Knowledge of algorithms and data structures
+Good understanding of build systems (gradle, cmake)
+Deep knowledge of design patterns.
+Strong math skills
+
+Разработка встроенного программного обеспечения на языках C и C++ для платформ Linux (уровень пользовательского пространства)
+Знакомство с механизмами межпроцессной коммуникации (IPC)
+Многопоточная разработка программного обеспечения для систем реального времени
+Практический опыт работы с компиляторами, отладчиками, системами сборки
+Работа в команде с использованием Agile принципов
+
+Minimum 3 years professional experience in C++ development.
+Good practical knowledge of the Unix operating system.
+Proficient in object-oriented programming.
+Experience with test driven development.
+
+Embedded software development in C/C++
+Embedded Linux development
+Knowledge of embedded systems architecture
+Familiarity with common codec formats (HEVC, H264, AAC, Dolby)
+Familiarity with Gstreamer internals
+Hands-on experience with STB technologies (DVB, DVR/PVR, IPTV)
+Knowledge of media sharing protocols (UPnP, DLNA)
+Platform & Content Security (CA, DRM, Cryptography)
+IPTV & adaptive bitrate (Apple HLS, MPEG-DASH, Microsoft SmoothStreaming)
+Digital Audio/Video media formats (MPEG, AVC/H.264, HEVC/H.265, Dolby)
+Linux DVB, V4L2, Media Controller, DirectFB, OpenGL, OpenMAX
+Familiarity with inter-process communication (IPC) mechanisms
+Proven track record of success with embedded system development projects
+Multi-threaded software development for real-time systems
+Hands-on experience with toolchains, compilers, debuggers, build systems
+Working as part of a team using Agile principles
+
+Experience in software development;
+Strong proficiency in C++, with fair knowledge of the language specification;
+Strong knowledge of the standard library;
+Passionate about programming and have a strong focus on performance aspects;
+Knowledge of C++14 standard is appreciated;
+Knowledge of writing a cross-platform code is appreciated; Implementation of automated testing platforms and unit tests;
+Proficient understanding of code versioning tools such as Git;
+Creative, resourceful and innovative problem solver;
+Excellent team player with the ability to work within a collaborative environment;
+ Good communication skills in English, both written and spoken.
+ 
+ опыт работы с микроконтроллерами Atmega, PIC, ARM, STM;
+умение читать конструкторскую документацию (сборочные чертежи, схемы монтажные и др);
+знание теории и практики цифровой обработки сигналов, теории управления;
+знание основ цифровой схемотехники;
+знание основ аналоговой схемотехники;
+опыт в разработке схем принципиальных (аналоговых, цифровых микроконтроллеров);
+знание САПР DipTrace или PCAD;
+умение ориентироваться в ГОСТ и технических регламентах.
+
+опыт разработки на С++ от 5-ти лет;
+знание специфики игровой разработки, типовых паттернов;
+знание современных стандартов С++ 11/14/17, STL;
+умение проектировать архитектуру, самостоятельно реализовывать игровые механики и/или движковые подсистемы;
+знание технического английского языка.
+
+Быть разработчиком или желание им стать
+Знание/опыт Dart/Flutter и желание развиваться во Flutter разработке;
+Хороший английский
