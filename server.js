@@ -168,7 +168,8 @@ async function startServer() {
                     SECRET_KEY,
                     { expiresIn: '1h' }
                 );
-                res.json({ token, isAdmin: user.is_admin });
+                // Добавляем name в ответ
+                res.json({ token, isAdmin: user.is_admin, name: user.name });
             } catch (error) {
                 console.error('Login error:', error);
                 res.status(500).json({ error: 'Server error during login' });
