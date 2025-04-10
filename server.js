@@ -51,88 +51,96 @@ async function initializeDatabase() {
         client = await pool.connect();
         console.log('Starting database initialization...');
 
-        // Удаление старых таблиц для чистого старта
-        await client.query('DROP TABLE IF EXISTS comments CASCADE');
-        await client.query('DROP TABLE IF EXISTS content CASCADE');
-        await client.query('DROP TABLE IF EXISTS sections CASCADE');
-        await client.query('DROP TABLE IF EXISTS users CASCADE');
-        console.log('Dropped existing tables if any');
-
-        // Создание таблицы users
-        await client.query(`
-            CREATE TABLE users (
-                id SERIAL PRIMARY KEY,
-                name VARCHAR(255) NOT NULL,
-                email VARCHAR(255) UNIQUE NOT NULL,
-                password VARCHAR(255) NOT NULL,
-                is_admin BOOLEAN DEFAULT false
-            )
+        // Проверка существования таблиц и их создание, если они отсутствуют
+        const tablesExist = await client.query(`
+            SELECT EXISTS (
+                SELECT FROM information_schema.tables 
+                WHERE table_name = 'users'
+            );
         `);
-        console.log('Table "users" created');
+        const usersTableExists = tablesExist.rows[0].exists;
 
-        // Создание таблицы sections
-        await client.query(`
-            CREATE TABLE sections (
-                id SERIAL PRIMARY KEY,
-                title VARCHAR(255) NOT NULL,
-                description TEXT,
-                color VARCHAR(50),
-                icon VARCHAR(50)
-            )
-        `);
-        console.log('Table "sections" created');
+        if (!usersTableExists) {
+            console.log('Tables do not exist. Creating tables...');
 
-        // Создание таблицы content
-        await client.query(`
-            CREATE TABLE content (
-                id SERIAL PRIMARY KEY,
-                section_id INTEGER REFERENCES sections(id) ON DELETE CASCADE,
-                title VARCHAR(255) NOT NULL,
-                text TEXT,
-                link VARCHAR(255),
-                file_path VARCHAR(255),
-                image_path VARCHAR(255),
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        `);
-        console.log('Table "content" created');
+            // Создание таблицы users
+            await client.query(`
+                CREATE TABLE users (
+                    id SERIAL PRIMARY KEY,
+                    name VARCHAR(255) NOT NULL,
+                    email VARCHAR(255) UNIQUE NOT NULL,
+                    password VARCHAR(255) NOT NULL,
+                    is_admin BOOLEAN DEFAULT false
+                )
+            `);
+            console.log('Table "users" created');
 
-        // Создание таблицы comments
-        await client.query(`
-            CREATE TABLE comments (
-                id SERIAL PRIMARY KEY,
-                content_id INTEGER REFERENCES content(id) ON DELETE CASCADE,
-                user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-                text TEXT NOT NULL,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        `);
-        console.log('Table "comments" created');
+            // Создание таблицы sections
+            await client.query(`
+                CREATE TABLE sections (
+                    id SERIAL PRIMARY KEY,
+                    title VARCHAR(255) NOT NULL,
+                    description TEXT,
+                    color VARCHAR(50),
+                    icon VARCHAR(50)
+                )
+            `);
+            console.log('Table "sections" created');
 
-        // Создание администратора
-        const adminEmail = process.env.ADMIN_EMAIL || 'svaleriya695@gmail.com';
-        const adminPassword = process.env.ADMIN_PASSWORD || 'admin_password';
-        const hashedPassword = await bcrypt.hash(adminPassword, 10);
-        await client.query(
-            'INSERT INTO users (name, email, password, is_admin) VALUES ($1, $2, $3, $4) ON CONFLICT (email) DO NOTHING',
-            ['Admin', adminEmail, hashedPassword, true]
-        );
-        console.log('Admin user created or already exists');
+            // Создание таблицы content
+            await client.query(`
+                CREATE TABLE content (
+                    id SERIAL PRIMARY KEY,
+                    section_id INTEGER REFERENCES sections(id) ON DELETE CASCADE,
+                    title VARCHAR(255) NOT NULL,
+                    text TEXT,
+                    link VARCHAR(255),
+                    file_path VARCHAR(255),
+                    image_path VARCHAR(255),
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            `);
+            console.log('Table "content" created');
 
-        // Добавление начальных разделов
-        await client.query(
-            'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
-            ['Теоретические материалы', 'Материалы для изучения теории', 'primary', 'book']
-        );
-        await client.query(
-            'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
-            ['Практические задания', 'Задания для практики', 'secondary', 'tasks']
-        );
-        await client.query(
-            'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
-            ['Контроль знаний', 'Тесты и контрольные задания', 'purple-500', 'check-circle']
-        );
-        console.log('Initial sections created');
+            // Создание таблицы comments
+            await client.query(`
+                CREATE TABLE comments (
+                    id SERIAL PRIMARY KEY,
+                    content_id INTEGER REFERENCES content(id) ON DELETE CASCADE,
+                    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+                    text TEXT NOT NULL,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            `);
+            console.log('Table "comments" created');
+
+            // Создание администратора
+            const adminEmail = process.env.ADMIN_EMAIL || 'svaleriya695@gmail.com';
+            const adminPassword = process.env.ADMIN_PASSWORD || 'admin_password';
+            const hashedPassword = await bcrypt.hash(adminPassword, 10);
+            await client.query(
+                'INSERT INTO users (name, email, password, is_admin) VALUES ($1, $2, $3, $4) ON CONFLICT (email) DO NOTHING',
+                ['Admin', adminEmail, hashedPassword, true]
+            );
+            console.log('Admin user created');
+
+            // Добавление начальных разделов
+            await client.query(
+                'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
+                ['Теоретические материалы', 'Материалы для изучения теории', 'primary', 'book']
+            );
+            await client.query(
+                'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
+                ['Практические задания', 'Задания для практики', 'secondary', 'tasks']
+            );
+            await client.query(
+                'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
+                ['Контроль знаний', 'Тесты и контрольные задания', 'purple-500', 'check-circle']
+            );
+            console.log('Initial sections created');
+        } else {
+            console.log('Tables already exist. Skipping creation.');
+        }
 
     } catch (error) {
         console.error('Error during database initialization:', error);
