@@ -14,7 +14,7 @@ const SECRET_KEY = process.env.SECRET_KEY || 'my-super-secret-key';
 // Подключение к PostgreSQL (настроено для Neon)
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    ssl: { rejectUnauthorized: false } // Neon требует SSL
+    ssl: { rejectUnauthorized: false }
 });
 
 // Middleware
@@ -118,6 +118,21 @@ async function initializeDatabase() {
             ['Admin', adminEmail, hashedPassword, true]
         );
         console.log('Admin user created or already exists');
+
+        // Добавление начальных разделов
+        await client.query(
+            'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
+            ['Теоретические материалы', 'Материалы для изучения теории', 'primary', 'book']
+        );
+        await client.query(
+            'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
+            ['Практические задания', 'Задания для практики', 'secondary', 'tasks']
+        );
+        await client.query(
+            'INSERT INTO sections (title, description, color, icon) VALUES ($1, $2, $3, $4) ON CONFLICT (title) DO NOTHING',
+            ['Контроль знаний', 'Тесты и контрольные задания', 'purple-500', 'check-circle']
+        );
+        console.log('Initial sections created');
 
     } catch (error) {
         console.error('Error during database initialization:', error);
@@ -226,7 +241,6 @@ async function startServer() {
                 const contentResult = await pool.query('SELECT * FROM content WHERE section_id = $1 ORDER BY created_at DESC', [sectionId]);
                 const content = contentResult.rows;
 
-                // Для каждого материала получаем комментарии
                 for (let item of content) {
                     const commentsResult = await pool.query(`
                         SELECT c.*, u.name as user_name 
@@ -242,6 +256,16 @@ async function startServer() {
             } catch (error) {
                 console.error(`Error fetching content for section ${sectionId}:`, error);
                 res.status(500).json({ error: 'Server error fetching content' });
+            }
+        });
+
+        app.get('/api/files', async (req, res) => {
+            try {
+                const result = await pool.query('SELECT id, title, file_path, image_path FROM content WHERE file_path IS NOT NULL OR image_path IS NOT NULL');
+                res.json(result.rows);
+            } catch (error) {
+                console.error('Error fetching files:', error);
+                res.status(500).json({ error: 'Server error fetching files' });
             }
         });
 
@@ -310,6 +334,44 @@ async function startServer() {
             }
         });
 
+        app.put('/api/content/:id', authenticateToken, isAdmin, upload.fields([{ name: 'file', maxCount: 1 }, { name: 'image', maxCount: 1 }]), async (req, res) => {
+            const { id } = req.params;
+            const { sectionId, title, text, link } = req.body;
+            if (!sectionId || !title) {
+                return res.status(400).json({ error: 'Section ID and Title are required' });
+            }
+            const filePath = req.files && req.files['file'] ? 'uploads/' + req.files['file'][0].filename : req.body.filePath;
+            const imagePath = req.files && req.files['image'] ? 'uploads/' + req.files['image'][0].filename : req.body.imagePath;
+
+            try {
+                const result = await pool.query(
+                    'UPDATE content SET section_id = $1, title = $2, text = $3, link = $4, file_path = $5, image_path = $6 WHERE id = $7 RETURNING *',
+                    [sectionId, title, text || null, link || null, filePath, imagePath, id]
+                );
+                if (result.rows.length === 0) {
+                    return res.status(404).json({ error: 'Content not found' });
+                }
+                res.json(result.rows[0]);
+            } catch (error) {
+                console.error('Error updating content:', error);
+                res.status(500).json({ error: 'Server error updating content' });
+            }
+        });
+
+        app.delete('/api/content/:id', authenticateToken, isAdmin, async (req, res) => {
+            const { id } = req.params;
+            try {
+                const result = await pool.query('DELETE FROM content WHERE id = $1 RETURNING *', [id]);
+                if (result.rows.length === 0) {
+                    return res.status(404).json({ error: 'Content not found' });
+                }
+                res.json({ message: 'Content deleted' });
+            } catch (error) {
+                console.error('Error deleting content:', error);
+                res.status(500).json({ error: 'Server error deleting content' });
+            }
+        });
+
         app.post('/api/comments', authenticateToken, async (req, res) => {
             const { contentId, text } = req.body;
             const userId = req.user.id;
@@ -322,13 +384,26 @@ async function startServer() {
                     [contentId, userId, text]
                 );
                 const comment = result.rows[0];
-                // Получаем имя пользователя для ответа
                 const userResult = await pool.query('SELECT name FROM users WHERE id = $1', [userId]);
                 comment.user_name = userResult.rows[0].name;
                 res.status(201).json(comment);
             } catch (error) {
                 console.error('Error adding comment:', error);
                 res.status(500).json({ error: 'Server error adding comment' });
+            }
+        });
+
+        app.delete('/api/comments/:id', authenticateToken, isAdmin, async (req, res) => {
+            const { id } = req.params;
+            try {
+                const result = await pool.query('DELETE FROM comments WHERE id = $1 RETURNING *', [id]);
+                if (result.rows.length === 0) {
+                    return res.status(404).json({ error: 'Comment not found' });
+                }
+                res.json({ message: 'Comment deleted' });
+            } catch (error) {
+                console.error('Error deleting comment:', error);
+                res.status(500).json({ error: 'Server error deleting comment' });
             }
         });
 
