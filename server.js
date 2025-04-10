@@ -52,6 +52,7 @@ async function initializeDatabase() {
         console.log('Starting database initialization...');
 
         // Удаление старых таблиц для чистого старта
+        await client.query('DROP TABLE IF EXISTS comments CASCADE');
         await client.query('DROP TABLE IF EXISTS content CASCADE');
         await client.query('DROP TABLE IF EXISTS sections CASCADE');
         await client.query('DROP TABLE IF EXISTS users CASCADE');
@@ -95,6 +96,18 @@ async function initializeDatabase() {
             )
         `);
         console.log('Table "content" created');
+
+        // Создание таблицы comments
+        await client.query(`
+            CREATE TABLE comments (
+                id SERIAL PRIMARY KEY,
+                content_id INTEGER REFERENCES content(id) ON DELETE CASCADE,
+                user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+                text TEXT NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        `);
+        console.log('Table "comments" created');
 
         // Создание администратора
         const adminEmail = process.env.ADMIN_EMAIL || 'svaleriya695@gmail.com';
@@ -168,7 +181,6 @@ async function startServer() {
                     SECRET_KEY,
                     { expiresIn: '1h' }
                 );
-                // Добавляем name в ответ
                 res.json({ token, isAdmin: user.is_admin, name: user.name });
             } catch (error) {
                 console.error('Login error:', error);
@@ -211,8 +223,22 @@ async function startServer() {
                 return res.status(400).json({ error: 'Invalid section ID format' });
             }
             try {
-                const result = await pool.query('SELECT * FROM content WHERE section_id = $1 ORDER BY created_at DESC', [sectionId]);
-                res.json(result.rows);
+                const contentResult = await pool.query('SELECT * FROM content WHERE section_id = $1 ORDER BY created_at DESC', [sectionId]);
+                const content = contentResult.rows;
+
+                // Для каждого материала получаем комментарии
+                for (let item of content) {
+                    const commentsResult = await pool.query(`
+                        SELECT c.*, u.name as user_name 
+                        FROM comments c 
+                        JOIN users u ON c.user_id = u.id 
+                        WHERE c.content_id = $1 
+                        ORDER BY c.created_at ASC
+                    `, [item.id]);
+                    item.comments = commentsResult.rows;
+                }
+
+                res.json(content);
             } catch (error) {
                 console.error(`Error fetching content for section ${sectionId}:`, error);
                 res.status(500).json({ error: 'Server error fetching content' });
@@ -233,6 +259,27 @@ async function startServer() {
             } catch (error) {
                 console.error('Error creating section:', error);
                 res.status(500).json({ error: 'Server error creating section' });
+            }
+        });
+
+        app.put('/api/sections/:id', authenticateToken, isAdmin, async (req, res) => {
+            const { id } = req.params;
+            const { title, description, color, icon } = req.body;
+            if (!title) {
+                return res.status(400).json({ error: 'Title is required for a section' });
+            }
+            try {
+                const result = await pool.query(
+                    'UPDATE sections SET title = $1, description = $2, color = $3, icon = $4 WHERE id = $5 RETURNING *',
+                    [title, description || null, color || null, icon || null, id]
+                );
+                if (result.rows.length === 0) {
+                    return res.status(404).json({ error: 'Section not found' });
+                }
+                res.json(result.rows[0]);
+            } catch (error) {
+                console.error('Error updating section:', error);
+                res.status(500).json({ error: 'Server error updating section' });
             }
         });
 
@@ -260,6 +307,28 @@ async function startServer() {
                     console.error('Error adding content:', error);
                     res.status(500).json({ error: 'Server error adding content' });
                 }
+            }
+        });
+
+        app.post('/api/comments', authenticateToken, async (req, res) => {
+            const { contentId, text } = req.body;
+            const userId = req.user.id;
+            if (!contentId || !text) {
+                return res.status(400).json({ error: 'Content ID and text are required' });
+            }
+            try {
+                const result = await pool.query(
+                    'INSERT INTO comments (content_id, user_id, text) VALUES ($1, $2, $3) RETURNING *',
+                    [contentId, userId, text]
+                );
+                const comment = result.rows[0];
+                // Получаем имя пользователя для ответа
+                const userResult = await pool.query('SELECT name FROM users WHERE id = $1', [userId]);
+                comment.user_name = userResult.rows[0].name;
+                res.status(201).json(comment);
+            } catch (error) {
+                console.error('Error adding comment:', error);
+                res.status(500).json({ error: 'Server error adding comment' });
             }
         });
 
